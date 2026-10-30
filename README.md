@@ -11,7 +11,7 @@ Welcome to **Pengudoku**, a logic puzzle game. This repository provides level gu
 
 ## 🛠️ How to Get Started
 
-1. **Visit This Site:**<br>Access the live site at [here.](https://sajid1397.github.io/Pengudoku/)<br>
+1. **Visit This Site:**<br>Access the live site at [here👈.](https://sajid1397.github.io/Pengudoku/)<br>
 2. **Search Your Level:**<br>Enter your level number for guides.
 
 
