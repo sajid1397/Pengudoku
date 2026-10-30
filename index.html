@@ -43,20 +43,6 @@
             align-items: center;
         }
 
-        .offline-banner {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            background: #ff9800;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            font-weight: bold;
-            z-index: 1001;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-        }
-        .offline-banner.show { display: block; }
-
         .controls {
             margin-bottom: 25px;
             display: flex;
@@ -233,8 +219,6 @@
 </head>
 <body>
 
-    <div id="offlineBanner" class="offline-banner">📴 Offline — showing cached images only</div>
-
     <header>
         <h1>Pengudoku Tutorials</h1>
     </header>
@@ -287,7 +271,6 @@
         const modalImg = document.getElementById("modalImg");
         const captionText = document.getElementById("caption");
         const backToTopBtn = document.getElementById("backToTop");
-        const offlineBanner = document.getElementById("offlineBanner");
 
         async function requestPersistentStorage() {
             try {
@@ -451,13 +434,6 @@
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
 
-        function updateOnlineStatus() {
-            if (navigator.onLine) offlineBanner.classList.remove("show");
-            else                  offlineBanner.classList.add("show");
-        }
-        window.addEventListener("online",  updateOnlineStatus);
-        window.addEventListener("offline", updateOnlineStatus);
-
         document.addEventListener("keydown", (e) => {
             if (modal.style.display === "flex") {
                 if (e.key === "Escape")     closeModal();
@@ -469,7 +445,6 @@
         (async function init() {
             await requestPersistentStorage();
             loadBatch();
-            updateOnlineStatus();
         })();
     </script>
 </body>
