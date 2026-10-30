@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pengudoku Tutorials (Levels 00–1000)</title>
+    <title>Pengudoku Tutorials</title>
     <style>
         :root {
             --bg-color: #f4f7f6;
@@ -160,6 +160,7 @@
             width: 100%;
         }
     </style>
+    <meta name="google-site-verification" content="bnV5MGADHTbB91DRwelD-i--F7qr1GB4hAAKn5dudPQ" />
 </head>
 <body>
 
@@ -167,7 +168,7 @@
     
     <div class="controls">
         <label for="levelSearch">Search Level: </label>
-        <input type="number" id="levelSearch" placeholder="e.g. 00" min="0" max="1000" oninput="filterLevels()">
+        <input type="number" id="levelSearch" placeholder="e.g. 0" min="0" max="9999" oninput="filterLevels()">
         <button onclick="clearSearch()">Show All</button>
     </div>
 
@@ -184,7 +185,7 @@
 
     <script>
         const startLevel = 0;
-        const endLevel = 1000;
+        const endLevel = 9999;
         const baseRepoUrl = "https://raw.githubusercontent.com/sajid1397/Pengudoku/main/tutorials/";
         
         let currentActiveLevel = null;
